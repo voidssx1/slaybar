@@ -1,7 +1,3 @@
 # Slaybar
 
-Minimal translucent Waybar configuration for Niri.
-
-## Screenshot
-
-![Slaybar](screenshots.png)
+Minimal translucent Waybar configuration for Niri. (vertical one)
