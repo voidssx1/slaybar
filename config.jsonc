@@ -1,71 +1,86 @@
 {
   "layer": "top",
-  "position": "top",
-  "height": 42,
+  "position": "left",
+  "orientation": "vertical",
+  "width": 62,
   "spacing": 8,
   "margin-top": 0,
-  "margin-left": 8,
-  "margin-right": 8,
+  "margin-left": 0,
+  "margin-right": 0,
+  "margin-bottom": 0,
   "exclusive": true,
   "fixed-center": true,
-  "modules-left": ["niri/workspaces"],
-  "modules-center": ["clock"],
-  "modules-right": ["network", "bluetooth", "pulseaudio", "backlight", "cpu", "memory", "battery"],
-
+  "modules-left": [
+    "niri/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "network",
+    "bluetooth",
+    "pulseaudio",
+    "backlight",
+    "cpu",
+    "memory",
+    "battery"
+  ],
   "niri/workspaces": {
     "format": "{icon}",
     "current-only": true,
     "format-icons": {
-      "1": "一", "2": "二", "3": "三", "4": "四", "5": "五",
-      "6": "六", "7": "七", "8": "八", "9": "九", "10": "十",
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "十",
       "default": "一"
     }
   },
-
   "clock": {
-    "format": "{:%H:%M}",
+    "format": "{:%H\n%M}",
     "tooltip-format": "{:%A, %d %B %Y}"
   },
-
   "network": {
-    "format-wifi": "{essid}",
-    "format-ethernet": "Ethernet",
-    "format-disconnected": "Disconnected",
+    "format-wifi": " ",
+    "format-ethernet": " ",
+    "format-disconnected": " ",
     "tooltip-format": "{ifname}: {ipaddr}"
   },
-
   "bluetooth": {
-    "format": "{status}",
-    "format-connected": "Connected",
-    "format-disabled": "Disabled",
-    "format-off": "Off"
+    "format": "",
+    "format-connected": "",
+    "format-disabled": "",
+    "format-off": ""
   },
-
   "pulseaudio": {
     "format": "{volume}%",
-    "format-muted": "Muted",
-    "on-click": "pavucontrol"
+    "format-muted": "Muted"
   },
-
   "backlight": {
     "format": "{percent}%"
   },
-
   "cpu": {
     "format": "{usage}%"
   },
-
   "memory": {
     "format": "{percentage}%"
   },
-
   "battery": {
+    "tooltip": false,
     "format": "{capacity}%",
     "format-charging": "{capacity}%",
-    "format-plugged": "{capacity}% plugged",
+    "format-plugged": "{capacity}%",
     "states": {
       "warning": 30,
       "critical": 15
-    }
+    },
+    "format-discharging": "{capacity}%",
+    "format-full": "{capacity}%"
   }
 }
